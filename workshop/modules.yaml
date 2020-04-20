@@ -8,8 +8,6 @@ modules:
         name: Containerize the Application
     exercises/step3:
         name: Look at a Kubernetes Cluster
-    exercises/step4:
-        name: Deploy your Application
     finish:
         name: Workshop Summary
         exit_sign: Finish Workshop
