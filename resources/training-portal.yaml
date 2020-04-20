@@ -8,4 +8,5 @@ spec:
     expires: 60m
     orphaned: 5m
   workshops:
-  - name: lab-markdown-sample
+    - name: lab-markdown-sample
+    - name: lab-k8s-fundamentals
