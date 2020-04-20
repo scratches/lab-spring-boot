@@ -1,11 +1,11 @@
 apiVersion: training.eduk8s.io/v1alpha1
 kind: Workshop
 metadata:
-  name: lab-markdown-sample
+  name: lab-spring-boot
 spec:
   vendor: eduk8s.io
-  title: Markdown Sample
-  description: A sample workshop using Markdown
+  title: Getting Started with Spring Boot
+  description: Create a Spring Boot application and deploy it to Kubernetes
   url: https://github.com/scratches/lab-spring-boot
   #image: dsyer/lab-spring-boot:master
   content: github.com/scratches/lab-spring-boot
@@ -13,7 +13,14 @@ spec:
   session:
     budget: small
     applications:
+      terminal:
+        enabled: true
+        layout: split
       console:
         enabled: true
       editor:
+        enabled: true
+      registry:
+        enabled: true
+      docker:
         enabled: true
