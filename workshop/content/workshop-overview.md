@@ -1,1 +1,1 @@
-This is a workshop.
+This is a workshop. Own it.
