@@ -7,7 +7,7 @@ modules:
     exercises/step2:
         name: Containerize the Application
     exercises/step3:
-        name: Look at a Kubernetes Cluster
+        name: Deploy the Application in Kubernetes
     finish:
         name: Workshop Summary
         exit_sign: Finish Workshop
