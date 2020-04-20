@@ -6,9 +6,9 @@ spec:
   vendor: eduk8s.io
   title: Markdown Sample
   description: A sample workshop using Markdown
-  url: https://github.com/eduk8s/lab-markdown-sample
+  url: https://github.com/scratches/lab-markdown-sample
   #image: quay.io/eduk8s/lab-markdown-sample:master
-  content: github.com/eduk8s/lab-markdown-sample
+  content: github.com/scratches/lab-markdown-sample
   duration: 15m
   session:
     budget: small
