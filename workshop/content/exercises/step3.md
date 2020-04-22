@@ -16,8 +16,7 @@ Now we can deploy our Spring Boot application.
 To prepare for the deployment there is a secret that we need to apply once, so that Kubernetes can pull images from the private repo we have been using:
 
 ```execute
-kubectl create secret generic registry-credentials --from-file=.dockerconfigjson=$HOME/.docker/config.json --type=kuberne
-tes.io/dockerconfigjson
+kubectl create secret generic registry-credentials --from-file=.dockerconfigjson=$HOME/.docker/config.json --type=kubernetes.io/dockerconfigjson
 ```
 
 You have a container that runs and exposes port 8080, so all you need to make Kubernetes run it is some YAML. To avoid having to look at or edit YAML, for now, you can ask `kubectl` to generate it for you. The only thing that might vary here is the `--image` name. If you deployed your container to your own repository, use its tag instead of this one:
