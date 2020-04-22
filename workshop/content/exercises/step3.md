@@ -16,7 +16,7 @@ Now we can deploy our Spring Boot application.
 You have a container that runs and exposes port 8080, so all you need to make Kubernetes run it is some YAML. To avoid having to look at or edit YAML, for now, you can ask `kubectl` to generate it for you. The only thing that might vary here is the `--image` name. If you deployed your container to your own repository, use its tag instead of this one:
 
 ```execute
-kubectl create deployment demo --image=localhost/springguides/demo --dry-run -o=yaml > deployment.yaml
+kubectl create deployment demo --image={{ REGISTRY_HOST }}/springguides/demo --dry-run -o=yaml > deployment.yaml
 ```
 
 ```execute

@@ -18,16 +18,16 @@ ENTRYPOINT ["java","-cp","app:app/lib/*","com.example.demo.DemoApplication"]
 EOF
 ```
 
-Then build the container image, giving it a tag (choose your own ID instead of "localhost/springguides" if you are going to push to Dockerhub):
+Then build the container image, giving it a tag (choose your own ID instead of "{{ REGISTRY_HOST }}/springguides" if you are going to push to Dockerhub):
 
 ```execute
-docker build -t localhost/springguides/demo .
+docker build -t {{ REGISTRY_HOST }}/springguides/demo .
 ```
 
 You can run the container locally:
 
 ```execute
-docker run -p 8080:8080 localhost/springguides/demo
+docker run -p 8080:8080 {{ REGISTRY_HOST }}/springguides/demo
 ```
 
 Sample output:
@@ -67,7 +67,7 @@ Finish off by killing the container:
 > NOTE: In this tutorial environment, you will be able to push the image even though you did not authenticate with Dockerhub (`docker login`). If you are running locally you can change the image label and push to Dockerhub, or there's an image `springguides/demo` already there that should work if you want to skip this step.
 
 ```execute
-docker push localhost/springguides/demo
+docker push {{ REGISTRY_HOST }}/springguides/demo
 ```
 
 The image needs to be pushed to an accessible registry because Kubernetes pulls the image from inside its Kubelets (nodes), which are not in general connected to the local docker daemon.
