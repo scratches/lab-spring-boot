@@ -3,7 +3,7 @@
 The first thing we will do is create a Spring Boot application. If you have one you prefer to use already in github, you could clone it in the terminal (`git` and `java` are installed already). Or you can create an application from scratch using start.spring.io:
 
 ```execute
-curl https://start.spring.io/starter.tgz -d dependencies=webflux,actuator | tar -xzvf -
+mkdir demo && cd demo && curl https://start.spring.io/starter.tgz -d dependencies=webflux,actuator | tar -xzvf -
 ```
 
 You can then build the application:
