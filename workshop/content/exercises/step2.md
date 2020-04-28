@@ -11,6 +11,8 @@ RUN jar -xf ./app.jar
 FROM openjdk:8-jre-alpine
 VOLUME /tmp
 ARG DEPENDENCY=target/dependency
+RUN addgroup -S spring && adduser -S spring -G spring
+USER spring:spring
 COPY --from=builder \${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY --from=builder \${DEPENDENCY}/META-INF /app/META-INF
 COPY --from=builder \${DEPENDENCY}/BOOT-INF/classes /app
