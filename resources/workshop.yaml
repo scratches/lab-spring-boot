@@ -10,6 +10,7 @@ spec:
   #image: dsyer/lab-spring-boot:master
   content: github.com/scratches/lab-spring-boot
   duration: 15m
+  image: dsyer/ws
   session:
     budget: small
     applications:
